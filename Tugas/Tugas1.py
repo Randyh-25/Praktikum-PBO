@@ -1,9 +1,12 @@
+# Randy Hendriyawan
+# 122140171
+# PBO RF
 # Inisialisasi dictionary untuk menyimpan data mahasiswa
-mahasiswa = {}
+mahasiswa = {}  # Dictionary kosong untuk menyimpan data mahasiswa dengan NIM sebagai kunci
 
 # Fungsi untuk menambah mahasiswa
 def tambah_mahasiswa(nim, nama, nilai):
-    mahasiswa[nim] = {'nama': nama, 'nilai': nilai}
+    mahasiswa[nim] = {'nama': nama, 'nilai': nilai}  # Menambahkan data mahasiswa ke dictionary
     print("Mahasiswa berhasil ditambahkan!")
 
 # Fungsi untuk menampilkan semua mahasiswa
@@ -11,24 +14,27 @@ def tampilkan_mahasiswa():
     print("==== DATA MAHASISWA ====")
     print("NIM      | Nama  | Nilai")
     print("-------------------------")
-    for nim, data in mahasiswa.items():
+    for nim, data in mahasiswa.items():  # Iterasi untuk menampilkan seluruh data mahasiswa
         print(f"{nim}  | {data['nama']}   | {data['nilai']}")
 
 # Fungsi untuk mencari mahasiswa berdasarkan NIM
 def cari_mahasiswa(nim):
-    if nim in mahasiswa:
+    if nim in mahasiswa:  # Mengecek apakah NIM ada dalam dictionary
         data = mahasiswa[nim]
         print(f"Data Mahasiswa:\nNIM: {nim}\nNama: {data['nama']}\nNilai: {data['nilai']}")
     else:
         print("Mahasiswa tidak ditemukan.")
 
+# Randy Hendriyawan
+# 122140171
+
 # Fungsi untuk mengedit data mahasiswa
 def edit_mahasiswa(nim, nama_baru=None, nilai_baru=None):
     if nim in mahasiswa:
         if nama_baru:
-            mahasiswa[nim]['nama'] = nama_baru
+            mahasiswa[nim]['nama'] = nama_baru  # Mengubah nama jika diberikan input dari user
         if nilai_baru:
-            mahasiswa[nim]['nilai'] = nilai_baru
+            mahasiswa[nim]['nilai'] = nilai_baru  # Mengubah nilai jika diberikan input dari user
         print("Data berhasil diperbarui!")
     else:
         print("Mahasiswa tidak ditemukan.")
@@ -36,31 +42,36 @@ def edit_mahasiswa(nim, nama_baru=None, nilai_baru=None):
 # Fungsi untuk menghapus data mahasiswa
 def hapus_mahasiswa(nim):
     if nim in mahasiswa:
-        del mahasiswa[nim]
+        del mahasiswa[nim]  # Menghapus mahasiswa berdasarkan NIM yang dibuat sebelumnya
         print("Data mahasiswa berhasil dihapus.")
     else:
         print("Mahasiswa tidak ditemukan.")
 
 # Fungsi untuk menyimpan data ke file
 def simpan_ke_file(nama_file='mahasiswa.txt'):
-    file = open(nama_file, 'w')
+    file = open(nama_file, 'w')  # Membuka file untuk menulis
     for nim, data in mahasiswa.items():
-        file.write(f"{nim},{data['nama']},{data['nilai']}\n")
+        file.write(f"{nim},{data['nama']},{data['nilai']}\n")  # Menulis setiap mahasiswa ke file
     file.close()
     print(f"Data mahasiswa telah disimpan dalam file '{nama_file}'")
 
+# Randy Hendriyawan
+# 122140171
+
 # Fungsi untuk membaca data dari file
 def baca_dari_file(nama_file='mahasiswa.txt'):
-    global mahasiswa
+    global mahasiswa  # Menggunakan variabel global mahasiswa
     try:
-        file = open(nama_file, 'r')
+        file = open(nama_file, 'r')  # Membuka file untuk membaca
         for line in file:
-            nim, nama, nilai = line.strip().split(',')
-            mahasiswa[nim] = {'nama': nama, 'nilai': nilai}
+            nim, nama, nilai = line.strip().split(',')  # Memisahkan data berdasarkan koma
+            mahasiswa[nim] = {'nama': nama, 'nilai': nilai}  # Menambahkan data ke dictionary
         file.close()
         print(f"Data mahasiswa telah dimuat dari file '{nama_file}'")
     except FileNotFoundError:
         print(f"File '{nama_file}' tidak ditemukan.")
+# Randy Hendriyawan
+# 122140171
 
 # Menu utama
 def menu():
@@ -75,7 +86,8 @@ def menu():
         print("7. Baca dari File")
         print("8. Keluar")
         pilihan = input("Pilihan: ")
-
+# Randy Hendriyawan
+# 122140171
         if pilihan == '1':
             nim = input("Masukkan NIM: ")
             nama = input("Masukkan Nama: ")
@@ -106,4 +118,6 @@ def menu():
 
 # Menjalankan program
 if __name__ == "__main__":
-    menu()
+    menu()  # Memulai program dengan menampilkan menu utama
+# Randy Hendriyawan
+# 122140171
