@@ -1,6 +1,7 @@
 # Randy Hendriyawan
 # 122140171
 # PBO RF
+
 # Inisialisasi dictionary untuk menyimpan data mahasiswa
 mahasiswa = {}  # Dictionary kosong untuk menyimpan data mahasiswa dengan NIM sebagai kunci
 
