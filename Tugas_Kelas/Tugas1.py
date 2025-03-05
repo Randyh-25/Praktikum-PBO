@@ -27,8 +27,8 @@ def login():
         else:
             attempts += 1  # Menambah jumlah percobaan jika gagal
             print("Username atau password salah. Coba lagi.")
-            username = input("Masukkan NIM: ")
-            password = input("Masukkan Tanggal Lahir (DDMMYYYY): ")
+            username = input("Masukkan Username(NIM): ")
+            password = input("Masukkan Password(Tanggal Lahir): ")
     
     print("Terlalu banyak percobaan. Program keluar.")
     return False
