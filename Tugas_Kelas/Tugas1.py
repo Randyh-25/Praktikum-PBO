@@ -1,3 +1,7 @@
+# Randy Hendriyawan
+# 122140171
+# PBO RF
+
 # Fungsi untuk menghitung nilai akhir dari komponen penilaian
 def hitung_nilai_akhir(tugas, kuis, uts, uas):
     return (tugas + kuis + uts + uas) / 4  # Menghitung rata-rata nilai
@@ -14,6 +18,9 @@ def tentukan_nilai_huruf(nilai_akhir):
         return 'D'
     else:
         return 'E'
+
+# Randy Hendriyawan
+# 122140171
 
 # Fungsi untuk login dengan maksimal 3 percobaan
 def login():
@@ -32,6 +39,9 @@ def login():
     
     print("Terlalu banyak percobaan. Program keluar.")
     return False
+
+# Randy Hendriyawan
+# 122140171
 
 # Program utama
 def main():
@@ -77,6 +87,9 @@ def main():
             'Nilai Matakuliah': nilai_matakuliah
         })
 
+# Randy Hendriyawan
+# 122140171
+
     # Menampilkan data mahasiswa yang telah dimasukkan
     for i, mahasiswa in enumerate(data_mahasiswa):
         print(f"\nMahasiswa {i + 1}")
@@ -89,6 +102,9 @@ def main():
         for j, (matakuliah, nilai) in enumerate(mahasiswa['Nilai Matakuliah'].items()):
             print(f"{j + 1:<5} {matakuliah:<15} {nilai['Tugas']:<10} {nilai['Kuis']:<10} {nilai['UTS']:<10} {nilai['UAS']:<10} {nilai['Nilai Akhir']:<15.2f} {nilai['Nilai Huruf']:<10}")
         print("-" * 80)
+
+# Randy Hendriyawan
+# 122140171
 
     # Menambahkan opsi untuk keluar atau melanjutkan
     while True:
@@ -105,3 +121,6 @@ def main():
 # Menjalankan program utama jika file ini dieksekusi langsung
 if __name__ == "__main__":
     main()
+
+# Randy Hendriyawan
+# 122140171
