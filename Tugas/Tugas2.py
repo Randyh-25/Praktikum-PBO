@@ -101,8 +101,8 @@ class Game:
             print("⚠️ Aksi tidak valid! Silakan pilih 1, 2, atau 3.")  # Jika input tidak valid
 
 # Contoh penggunaan kelas Robot dan Game
-robot1 = Robot("Iman Puasa", 500, 375, 80)  # Membuat robot pertama dengan HP 500, serangan 10, akurasi 80%
-robot2 = Robot("Mokel", 750, 8, 70)  # Membuat robot kedua dengan HP 750, serangan 8, akurasi 70%
+robot1 = Robot("Iman Puasa", 20, 375, 80)  # Membuat robot pertama dengan HP 500, serangan 20, akurasi 80%
+robot2 = Robot("Mokel", 750, 15, 70)  # Membuat robot kedua dengan HP 750, serangan 15, akurasi 70%
 
 # Memulai permainan dengan dua robot yang telah dibuat
 game = Game(robot1, robot2)
