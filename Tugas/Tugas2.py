@@ -1,3 +1,7 @@
+# Randy Hendriyawan
+# 122140171
+# Praktikum PBO RF
+
 # -*- coding: utf-8 -*-
 import random  # Mengimpor modul random untuk menghasilkan angka acak
 
