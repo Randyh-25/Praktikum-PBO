@@ -33,7 +33,7 @@ class Mahasiswa:
     # Metode untuk mengonversi nilai angka ke huruf
     def konversi_nilai(self, nilai_angka):
         if nilai_angka >= 85:
-            return 'A'
+            return 'A' # Mengembalikan nilai huruf berdasarkan rentang nilai
         elif nilai_angka >= 70:
             return 'B'
         elif nilai_angka >= 56:
@@ -44,7 +44,7 @@ class Mahasiswa:
             return 'E'
 
     # Metode statis untuk menghitung IP berdasarkan daftar nilai mata kuliah
-    @staticmethod
+    @staticmethod # Dekorator untuk menandakan metode statis
     def hitung_ip(nilai_matakuliah):
         total_ip = 0  # Inisialisasi total IP
         for nilai in nilai_matakuliah:
@@ -53,7 +53,7 @@ class Mahasiswa:
         return total_ip / len(nilai_matakuliah) if nilai_matakuliah else 0  # Mengembalikan IP rata-rata
 
     # Metode statis untuk mengonversi nilai angka ke skala 4.0
-    @staticmethod
+    @staticmethod # Dekorator untuk menandakan metode statis
     def konversi_nilai_static(nilai_angka):
         if nilai_angka >= 85:
             return 4.0
