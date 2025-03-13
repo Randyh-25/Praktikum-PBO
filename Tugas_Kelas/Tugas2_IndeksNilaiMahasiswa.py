@@ -1,3 +1,7 @@
+# Randy Hendriyawan
+# 122140171
+# PBO RF
+
 class Mahasiswa:
     # Konstruktor untuk inisialisasi objek Mahasiswa dengan atribut nama dan daftar nilai mata kuliah
     def __init__(self, nama):
