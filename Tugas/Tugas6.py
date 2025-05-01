@@ -73,7 +73,7 @@ def login_user():
     else:
         messagebox.showerror("Login Gagal", "Username atau password salah")
 
-# ---------------------- Main Window ---------------------- #
+
 root = tk.Tk()
 root.title("Login")
 root.geometry("300x150")
